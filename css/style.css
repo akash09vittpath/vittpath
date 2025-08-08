@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 html, body {
   height: 100%;
@@ -18,11 +18,11 @@ body {
 
 
 :root {
-    --primary-color: #000000;
-    --background-color: #000;
-    --text-color: #fff;
-    --color:#fff;
-    --primary-font: roboto;
+  --primary-color: #000000;
+  --background-color: #000;
+  --text-color: #fff;
+  --color:#fff;
+  --primary-font: roboto;
 }
 
 /*logo*/
@@ -44,11 +44,13 @@ body {
 
 
 /*navlinks*/
-#nav-link {
+.nav-custom {
+    text-decoration: none;
     color: var(--text-color);
     font-weight:lighter;
     font-size:medium;
     border-bottom:2px solid var(--color);
+    padding: 2px;
     border-radius: 5px;
     font-family: var(--primary-font);
 }
@@ -63,87 +65,29 @@ body {
   justify-content: start;
   align-items: start;
 }
-.our-services {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.services-obj1-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .services-obj1 {
   width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 .about-us-obj1 {
   width: 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .service-1 {
-  margin-right: 12px;
   background-image: url("../images/service-1.jpeg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 15px;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 .service-2 {
-  margin-right: 12px;
   background-image: url("../images/service-3.jpeg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 15px;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 .service-3 {
-  /* margin-right: 12px; */
   background-image: url("../images/service-2.jpeg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 15px;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 
 .hero-obj1 {
   width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
 }
 .hero-obj1-1 {
   width: 35%;
@@ -159,9 +103,14 @@ body {
   width: 10%;
 }
 
+.c {
+  max-width: 100%;
+}
+
 /*Hero Section Character img*/
 .hero-section-img {
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   height: 100%;
   background-image: url("../images/hero-char.jpeg");;
   background-size: cover;
@@ -170,7 +119,8 @@ body {
 }
 /*About Character img*/
 .about-char-img {
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   height: 100%;
   background-image: url("../images/about-char.jpeg");;
   background-size: cover;
@@ -180,7 +130,7 @@ body {
 
 /*Hero section Lines*/
 .topline {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .midline {
   font-size: 4rem;
@@ -228,9 +178,6 @@ body {
 
 .footer-obj1 {
   width: 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 5rem;
 }
 
@@ -238,7 +185,7 @@ body {
   width: 35%;
   display: flex;  
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
   ul {
@@ -250,18 +197,34 @@ body {
     font-size: 1.2rem;
   }
 
+  .footer-line {
+    width: 90%;
+  }
+
+.footer-last {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
   @media (max-width: 768px) {
     .hero-section {
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
+      min-height: fit-content;
     }
     .our-services {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      min-height: fit-content;
     }
     .about-us {
     display: flex;
@@ -287,12 +250,13 @@ body {
     padding-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .footer-obj1 {
   width: 90%;
-  padding: 0;
-  padding-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 5rem; /* <-- remove this */
+}
+
+.ak {
+  margin-left: 2rem;
 }
 
   ul {
@@ -342,6 +306,8 @@ body {
 
   .services-obj1-1 {
     width: 90%;
+    gap: 1rem;
+    padding-bottom: 2rem;
   }
 
   .service-text {
@@ -350,18 +316,23 @@ body {
 
   .hero-section-img {
   background-position: top;
+  height: 100%;
   }
 
     /* Fix width for services on small screens */
   .services-obj1-1 > div {
     width: 100% !important;  /* Forces full width */
-    margin-bottom: 1rem;     /* Adds spacing between them */
+    margin: 0 auto;     /* Adds spacing between them */
   }
 
   /* Fix service text to be readable */
   .service-text {
     font-size: 1rem !important; /* readable size */
     text-align: center;
+  }
+
+  .vh-100 {
+    height: auto !important;
   }
 
   /* Ensure proper layout spacing */

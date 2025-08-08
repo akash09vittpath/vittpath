@@ -42,7 +42,6 @@ body {
   filter: brightness(0) invert(1);
 }
 
-
 /*navlinks*/
 .nav-custom {
     text-decoration: none;
@@ -91,6 +90,7 @@ body {
 }
 .hero-obj1-1 {
   width: 35%;
+  height: 75%;
 }
 .about-obj1-1 {
   width: 35%;
@@ -217,15 +217,21 @@ body {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      min-height: fit-content;
+      width: 100%;
     }
     .our-services {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: fit-content;
+      width: 100%;
+      height: 100%;
     }
+
+    .service-1 {
+      height: 100%;
+    }
+
     .about-us {
     display: flex;
     flex-direction: column;
@@ -291,6 +297,7 @@ body {
 
   .hero-obj1-1 {
     width: 90%;
+    height: 75%;
   }
   .about-obj1-1 {
     width: 90%;
@@ -316,7 +323,6 @@ body {
 
   .hero-section-img {
   background-position: top;
-  height: 100%;
   }
 
     /* Fix width for services on small screens */
@@ -343,6 +349,4 @@ body {
     padding: 1rem;
     margin: 0 auto;
   }
-
-
 }

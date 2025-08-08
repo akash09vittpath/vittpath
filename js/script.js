@@ -30,7 +30,8 @@ const serviceStyle = {
   borderTop: "5px solid white",
   borderBottom: "5px solid white",
   borderTopRightRadius: "20px",
-  borderBottomLeftRadius: "20px"
+  borderBottomLeftRadius: "20px",
+  height: "50vh"
 }
 
 const service1 = document.querySelector(".service-1");

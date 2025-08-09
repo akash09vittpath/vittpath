@@ -73,3 +73,102 @@ Object.assign(serviceObj1.style, columnFlexDirection);
 Object.assign(aboutUsObj1.style, columnFlexDirection);
 Object.assign(heroObj1.style, columnFlexDirection);
 Object.assign(footerObj1.style, columnFlexDirection);
+
+//updating bootstrap classes based on screen sizes
+function updateClassBasedOnScreenSize() {
+  
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  
+  const allBtns = document.querySelectorAll(".btn");
+  const btnInfo = document.querySelector(".btn-info");
+  const company = document.querySelector(".company");
+  
+  //hero-section
+  const heroSection = document.querySelector('.hero-section');
+  
+  
+  //about
+  const about = document.querySelector('.about-us');
+  const aboutSubText = document.querySelectorAll('.about-sub-text ');
+
+  //contact
+  const contact = document.querySelector(".contact");
+  const contactObj1 = document.querySelector(".contact-obj1");
+  const contactObj2 = document.querySelector(".contact-obj2");
+  const contactDetails = document.querySelector(".contact-details");
+  const contactForm = document.querySelector(".contact-form");
+
+  if(isMobile) {
+
+    //buttons
+    allBtns.forEach(btn => {
+      btn.classList.remove("w-25");
+      btn.classList.add("w-50");
+    });
+
+    company.style['font-size'] = '0.8rem'
+    
+    btnInfo.classList.remove('w-50');
+    btnInfo.style.width = '90px';
+    
+    //hero-section
+    heroSection.classList.remove('vh-100');
+    
+    heroSection.style.height = '100%';
+    
+    //about
+    about.classList.remove('vh-100');
+    aboutSubText.forEach(aboutSubText => {
+      aboutSubText.classList.remove('w-25');
+      aboutSubText.classList.add('w-100');
+      aboutSubText.style['font-size'] = '0.8rem';
+    });
+
+    about.style.height = '100%';  
+
+    //contact
+    contact.classList.remove('d-flex');
+    contact.classList.remove('vh-100');
+    contactObj1.classList.remove('w-50');
+    contactObj2.classList.remove('w-50');
+    contactForm.classList.remove('w-75');
+    contactObj2.classList.remove('p-5');
+
+    Object.assign(contact.style, columnFlexDirection);
+    contact.style.height = '100%';
+    contactObj1.style.width = '100%';
+    contactObj2.style.width = '100%';
+    contactDetails.style['font-size'] = '0.8rem';
+    contact.style.padding = '3.5rem';
+  }
+  else {
+    //buttons
+    allBtns.forEach(btn => {
+      btn.classList.add("w-25");
+    });
+    
+    btnInfo.classList.add('w-25');
+    
+    //hero-section
+    heroSection.classList.add('vh-100');
+    
+    //about
+    about.classList.add('vh-100');
+    aboutSubText.forEach(aboutSubText => {
+      aboutSubText.classList.add('w-25');
+    });
+
+    //contact
+    contact.classList.add('d-flex');
+    contact.classList.add('vh-100');
+    contactObj1.classList.add('w-50');
+    contactObj2.classList.add('w-50');
+    contactForm.classList.add('w-75');
+    contactObj2.classList.add('p-5');
+    contact.classList.add('d-flex');
+
+    contact.style.padding = '5rem';
+  }
+}
+updateClassBasedOnScreenSize();
+window.addEventListener('resize', updateClassBasedOnScreenSize);

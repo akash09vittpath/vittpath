@@ -163,6 +163,11 @@ body {
     font-size: large;
   }
 
+.contact {
+  font-family: var(--primary-font);
+  background-color: var(--background-color);
+}
+
 .services-obj1-1 {
     width: 75%;
     height: 100%;
@@ -211,6 +216,11 @@ body {
   padding-right: 2rem;
 }
 
+.footer-last p {
+  font-size: 0.6rem;
+
+}
+
   @media (max-width: 768px) {
     .hero-section {
       display: flex;
@@ -219,6 +229,12 @@ body {
       align-items: center;
       width: 100%;
     }
+
+    .footer-obj2 li {
+  font-size: 0.8rem;  /* or try 12px, or 0.75rem */
+}
+
+
     .our-services {
       display: flex;
       flex-direction: column;
@@ -297,7 +313,7 @@ body {
 
   .hero-obj1-1 {
     width: 90%;
-    height: 75%;
+    height: 400px;
   }
   .about-obj1-1 {
     width: 90%;
@@ -323,6 +339,7 @@ body {
 
   .hero-section-img {
   background-position: top;
+  height: 100%;
   }
 
     /* Fix width for services on small screens */

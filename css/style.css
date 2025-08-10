@@ -6,6 +6,7 @@
 
 html, body {
   height: 100%;
+  background-color: var(--background-color);
 }
 
 body {
@@ -37,11 +38,6 @@ body {
   background-color: var(--primary-color);
 }
 
-/*nav-btn*/
-#nav-btn {
-  filter: brightness(0) invert(1);
-}
-
 /*navlinks*/
 .nav-custom {
     text-decoration: none;
@@ -52,6 +48,10 @@ body {
     padding: 2px;
     border-radius: 5px;
     font-family: var(--primary-font);
+    transition: transform 0.3 ease;
+}
+.nav-custom:hover {
+  transform: scale(1.1);
 }
 
 #signup-btn {
@@ -69,6 +69,7 @@ body {
   width: 75%;
   padding: 2rem;
 }
+
 .about-us-obj1 {
   width: 55%;
   padding: 2rem;
@@ -77,6 +78,8 @@ body {
 .service-1 {
   background-image: url("../images/service-1.jpeg");
 }
+
+
 .service-2 {
   background-image: url("../images/service-3.jpeg");
 }

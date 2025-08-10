@@ -18,6 +18,24 @@ mail.addEventListener("click", () => {
     alert("Done");
 });
 
+const scrollToTop = document.querySelector(".scrollToTop");
+
+scrollToTop.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // for smooth scrolling
+    });
+  };
+  window.onscroll = () => {
+  if (window.scrollY > 300) {
+    scrollToTop.style.display = "block";
+    scrollToTop.classList.add("d-flex")
+  } else {
+    scrollToTop.classList.remove("d-flex")
+    scrollToTop.style.display = "none";
+  }
+};
+
 //service div
 const serviceStyle = {
   marginRight: "12px",
@@ -82,6 +100,10 @@ function updateClassBasedOnScreenSize() {
   const allBtns = document.querySelectorAll(".btn");
   const btnInfo = document.querySelector(".btn-info");
   const company = document.querySelector(".company");
+
+  //navbar
+  const navbar = document.querySelector(".navbar-nav");
+  const navbarLinks = document.querySelectorAll(".nav-custom");
   
   //hero-section
   const heroSection = document.querySelector('.hero-section');
@@ -99,6 +121,16 @@ function updateClassBasedOnScreenSize() {
   const contactForm = document.querySelector(".contact-form");
 
   if(isMobile) {
+
+    //Navbar
+    navbar.classList.remove("w-50");
+    navbar.classList.add("w-100");
+    navbarLinks.forEach(links=>{
+      links.classList.add("w-100");
+      links.classList.add("d-flex");
+      links.classList.add("justify-content-center");
+      links.classList.add("fs-2");
+    })
 
     //buttons
     allBtns.forEach(btn => {
@@ -135,13 +167,16 @@ function updateClassBasedOnScreenSize() {
     contactObj2.classList.remove('p-5');
 
     Object.assign(contact.style, columnFlexDirection);
+    
     contact.style.height = '100%';
     contactObj1.style.width = '100%';
     contactObj2.style.width = '100%';
     contactDetails.style['font-size'] = '0.8rem';
     contact.style.padding = '3.5rem';
+
   }
   else {
+
     //buttons
     allBtns.forEach(btn => {
       btn.classList.add("w-25");
@@ -172,3 +207,4 @@ function updateClassBasedOnScreenSize() {
 }
 updateClassBasedOnScreenSize();
 window.addEventListener('resize', updateClassBasedOnScreenSize);
+AOS.init();

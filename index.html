@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./images/logo.png" type="image/jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
 </head>
 <body>
@@ -31,7 +33,7 @@
         </div>
     </nav>
     <!--Hero Section-->
-    <section class="HeroSection" id="home">
+    <section class="HeroSection" id="home" data-aos="fade-up" data-aos-duration="1000">
       <div class="hero-section c container-fluid bg-black vh-100 px-5 py-2">
         <div class="hero-obj1 h-75">
             <p class="topline text-uppercase">Creative Designer</p>
@@ -39,7 +41,7 @@
             <p class="midline text-uppercase">Designers</p>
             <div class="border-bottom line"></div>
             <p class="summary mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium deleniti inventore asperiores quas? Incidunt, pariatur quos, eveniet itaque dicta velit cupiditate doloribus saepe voluptas consequuntur neque? Magni inventore ullam at.</p>
-            <button class="btn border btn-light w-25" type="button">Get Demo</button>
+            <button class="btn border btn-light w-25" type="button" data-aos="zoom-in">Get Demo</button>
           </div>
         <div class="hero-obj1-1">
           <div class="hero-section-img">
@@ -50,7 +52,7 @@
     </section>
     <hr class="bg-black m-0"/>
     <!--Our Services-->
-    <section class="OurServices" id="services">
+    <section class="OurServices" id="services" data-aos="fade-up" data-aos-duration="1000">
       <div class="our-services c container-fluid bg-black px-5 py-2">
         <div class="services-obj1">
           <p class="topline text-uppercase">Our Services</p>
@@ -61,13 +63,13 @@
             <button class="btn w-25 text-white border" type="button">View All</button>
           </div>
           <div class="services-obj1-1 row">
-          <div class="service-1 w-25 col">
+          <div class="service-1 w-25 col" data-aos="flip-left" data-aos-duration="1000">
             <p class="service-text text-uppercase">Algo Trading Infrastructure</p>
           </div>
-          <div class="service-2 w-25 col">
+          <div class="service-2 w-25 col" data-aos="flip-right" data-aos-duration="1000">
             <p class="service-text text-uppercase text-center">Website Design</p>
           </div>
-          <div class="service-3 w-25 col">
+          <div class="service-3 w-25 col" data-aos="flip-left" data-aos-duration="1000">
             <p class="service-text text-uppercase">Software Development</p>
           </div>
         </div>
@@ -76,10 +78,10 @@
   </section>
   <hr class="bg-black m-0"/>
   <!--About Us-->
-  <section class="aboutus" id="about">
+  <section class="aboutus" id="about" data-aos="fade-up" data-aos-duration="1000">
     <div class="about-us c container-fluid bg-black vh-100 px-5 py-2">
       <div class="about-obj1-1 h-75">
-        <div class="about-char-img">
+        <div class="about-char-img" data-aos="zoom-in-right" data-aos-duration="1000">
           <!--About Character image-->
         </div>
       </div>
@@ -98,7 +100,7 @@
   </section>
   <hr class="bg-black m-0"/>
   <!--contact-->
-  <section class="contact-section" id="contact">
+  <section class="contact-section" id="contact" data-aos="fade-up" data-aos-duration="1000">
     <div class="contact d-flex vh-100 w-100 text-white">
       <div class="contact-obj1 d-flex w-50 flex-column justify-content-around align-items-center">
         <div class="contact-us d-flex flex-column">
@@ -138,7 +140,7 @@
   </section>
   <hr class="bg-black m-0"/>
   <!--Footer-->
-  <footer class="footer bg-black text-white">
+  <footer class="footer bg-black text-white" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid footer-section c w-100 h-75">
       <div class="footer-obj1">
         <p class="ak">Vittpath</p>
@@ -173,14 +175,18 @@
             <li>Twitter</li>
           </ul>
         </div>
-    </div>
+        <!-- <i class="fa-solid bg-light text-black align-items-end fa-arrow-up scrollToTop"></i> -->
+        
+      </div>
     <hr class="footer-line m-auto"></hr>
     <div class="footer-last">
       <p>Vittpath Inc. All Rights Reserved 2023</p>
       <p>Terms & Conditions</p>
     </div>
   </footer>
+  <i id="scrollToTopBtn" class="fa-solid fa-arrow-up bg-light text-black scrollToTop d-flex justify-content-center align-items-center" style="cursor: pointer; position: fixed; bottom: 20px; right: 20px; padding: 10px; border-radius: 50%; width: 50px; height: 50px;"></i>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/script.js"></script> 
 </body>
 </html>

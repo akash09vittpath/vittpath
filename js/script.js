@@ -165,6 +165,8 @@ function updateClassBasedOnScreenSize() {
     contactObj2.classList.remove('w-50');
     contactForm.classList.remove('w-75');
     contactObj2.classList.remove('p-5');
+    contactObj2.classList.remove('justify-content-end');
+    contactObj2.classList.add('justify-content-center');
 
     Object.assign(contact.style, columnFlexDirection);
     

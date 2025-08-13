@@ -210,5 +210,3 @@ function updateClassBasedOnScreenSize() {
 updateClassBasedOnScreenSize();
 window.addEventListener('resize', updateClassBasedOnScreenSize);
 AOS.init();
-
-alert("Fsfsaf")

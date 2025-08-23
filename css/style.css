@@ -13,11 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-.full-page {
-  min-height: 100vh;
-}
-
-
 :root {
   --primary-color: #000000;
   --background-color: #000;
@@ -36,18 +31,19 @@ body {
 /*navbar*/
 .navbar {
   background-color: var(--primary-color);
+  height: 90px;
 }
 
 /*navlinks*/
 .nav-custom {
     text-decoration: none;
     color: var(--text-color);
-    font-weight:lighter;
+    font-weight:600;
     font-size:medium;
     border-bottom:2px solid var(--color);
     padding: 2px;
     border-radius: 5px;
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
     transition: transform 0.3 ease;
 }
 .nav-custom:hover {
@@ -56,13 +52,14 @@ body {
 
 #signup-btn {
     background-color: var(--color);
-    font-family: roboto;
+    /* font-family: roboto; */
 }
 
 .hero-section {
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .services-obj1 {
@@ -155,20 +152,21 @@ body {
 
 .midline, .topline, .summary, .about-summary{
   color: var(--color);
-  font-family: var(--primary-font);
+  /* font-family: var(--primary-font); */
 }
 
 .about-sub-text {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     color: var(--text-color);
-    font-family: var(--primary-font);
+    /* font-family: var(--primary-font); */
     font-size: large;
   }
 
 .contact {
-  font-family: var(--primary-font);
+  /* font-family: var(--primary-font); */
   background-color: var(--background-color);
+  color: #fff;
 }
 
 .services-obj1-1 {
@@ -180,7 +178,7 @@ body {
   display: flex;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  font-family: var(--primary-font);
+  /* font-family: var(--primary-font); */
   font-size: large;
 }
 
@@ -225,12 +223,18 @@ body {
 }
 
   @media (max-width: 768px) {
+
+    .navbar {
+      height: auto;
+    }
+
     .hero-section {
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       width: 100%;
+      margin-top: 80px;
     }
 
     .footer-obj2 li {
@@ -385,4 +389,17 @@ body {
 
 .WebDevObj1 {
   background-image: url("../images/WebDev.jpeg");
+}
+
+.heading {
+  font-size: clamp(20px, 2vw, 600px);
+}
+
+.lorem {
+  font-size: clamp(12px, 1vw, 500px);
+}
+
+#map {
+  height: 30vh;
+  width: 20vw;
 }

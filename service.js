@@ -106,7 +106,6 @@ function updateClassBasedOnScreenSize() {
     };
 
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
-    const heading = document.querySelector(".heading");
 
       //contact
       const contact = document.querySelector(".contact");
@@ -119,7 +118,6 @@ function updateClassBasedOnScreenSize() {
       const navbar = document.querySelector(".navbar-nav");
       const navbarLinks = document.querySelectorAll(".nav-custom");
     if (isMobile) {
-        heading.classList.add("fs-5");
 
         // FinanceAndTrading
         Object.assign(FinanceAndTrading.style, columnFlexDirection, commonSize);
@@ -172,7 +170,6 @@ function updateClassBasedOnScreenSize() {
         contact.style.padding = '3.5rem';
 
     } else {
-        heading.classList.remove("fs-5");
 
         // Restore desktop styles
         Object.assign(FinanceAndTrading.style, commonDesign);

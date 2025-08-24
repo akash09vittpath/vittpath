@@ -23,8 +23,8 @@ body {
 
 /*logo*/
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 10px;
 }
 
@@ -223,6 +223,12 @@ body {
 }
 
   @media (max-width: 768px) {
+
+    .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
 
     .navbar {
       height: auto;

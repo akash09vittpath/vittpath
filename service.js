@@ -94,15 +94,17 @@ function updateClassBasedOnScreenSize() {
 
     const commonObj1 = {
         width: "100%",
-        padding: "2rem",
+        // padding: "2rem",
+         padding: "1rem 2rem", 
     };
 
     const commonObj2 = {
         width: "90%",
-        maxWidth: "400px",
-        aspectRatio: "1 / 1",
+        maxWidth: "100%",
+        aspectRatio: "auto",
         transform: "rotate(0deg)",
         backgroundPosition: "center",
+        padding: "0 1rem",
     };
 
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
